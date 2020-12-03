@@ -13,6 +13,6 @@ spec:
       targetPort: 3306
   selector:
     db: mariadb
-  type: ClusterIP
+  type: LoadBalancer
 status:
   loadBalancer: {}
