@@ -11,7 +11,7 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: normal
+  storageClassName: manual
   selector:
     matchLabels:
       app: "drupal"
@@ -29,7 +29,6 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: normal
-  selector:
+  storageClassName: manual
     matchLabels:
       app: "drupal-mysql"
