@@ -1,0 +1,17 @@
+Create Role
+kubectl create role developer-role --resource=services,persistentvolumeclaims,pods --verb="*" --namespace=development
+
+Create Rolebinding
+kubectl create rolebinding developer-rolebinding --role=developer-role --user=drogo --namespace=development
+
+Add user to config and set new context
+kubectl config set-credentials drogo --client-certificate=/root/drogo.crt --client-key=/root/drogo.key
+
+kubectl config set-context developer --cluster=kubernetes --user=drogo
+
+kubectl use-context developer
+
+kubectl config use-context developer
+
+Switch to the original context if necessary
+kubectl config use-context kubernetes-admin@kubernetes

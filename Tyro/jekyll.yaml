@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: jekyll
+  name: jekyll
+spec:
+  volumes:
+  - name: site
+    persistentVolumeClaim:
+      claimName: jekyll-site
+  initContainers:
+  - name: copy-jekyll-site
+    image: kodekloud/jekyll
+    command: [ "jekyll", "new", "/site" ]
+    volumeMounts:
+    - name: site
+      mountPath: /site
+  containers:
+  - image: kodekloud/jekyll-serve
+    name: jekyll
+    volumeMounts:
+    - name: site
+      mountPath: /site
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
