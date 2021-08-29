@@ -8,11 +8,13 @@ spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
-  storageClassName: manual
-  hostPath:
-    path: /drupal-data
+  persistentVolumeReclaimPolicy: Recycle
+  hostPath:                # drupal-pv with hostPath
+    path: "/drupal-data"
+    type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -24,8 +26,10 @@ spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
-  storageClassName: manual
-  hostPath:
-    path: /drupal-mysql-data
+  persistentVolumeReclaimPolicy: Recycle
+  hostPath:                # drupal-mysql-pv with hostPath
+    path: "/drupal-mysql-data"
+    type: DirectoryOrCreate

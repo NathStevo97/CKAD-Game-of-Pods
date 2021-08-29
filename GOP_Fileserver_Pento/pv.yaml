@@ -1,16 +1,13 @@
-apiVersion: v1
+---
 kind: PersistentVolume
+apiVersion: v1
 metadata:
-  name: data-pv
-  labels:
-    run: gop-fileserver
+    name: data-pv
 spec:
-  capacity:
+   accessModes: ["ReadWriteMany"]
+   capacity:
     storage: 1Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteMany
-  storageClassName: normal
-  hostPath:
-    path: "/web"
+   hostPath:
+      path: /web
+      type: DirectoryOrCreate
   

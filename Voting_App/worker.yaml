@@ -1,9 +1,14 @@
+# kubectl create deployment worker --image=kodekloud/examplevotingapp_worker --dry-run -oyaml -n vote > worker.yaml
+# Edit the container name, it won't take underscore in container name (examplevotingapp_worker). 
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: worker
   labels:
     app: worker
+  name: worker
+  namespace: vote
 spec:
   replicas: 1
   selector:
@@ -15,5 +20,6 @@ spec:
         app: worker
     spec:
       containers:
-      - name: worker
-        image: kodekloud/examplevotingapp_worker
+      - image: kodekloud/examplevotingapp_worker
+        name: examplevotingapp-worker
+

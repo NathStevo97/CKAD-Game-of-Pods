@@ -1,9 +1,11 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: db-deployment
   labels:
     app: db-deployment
+  name: db-deployment
+  namespace: vote
 spec:
   replicas: 1
   selector:
@@ -15,11 +17,17 @@ spec:
         app: db-deployment
     spec:
       containers:
-      - name: postgres
-        image: postgres:9.4
+      - image: postgres:9.4
+        name: postgres
+        env:
+          - name: POSTGRES_HOST_AUTH_METHOD
+            value: trust
         volumeMounts:
           - mountPath: /var/lib/postgresql/data
             name: db-data
       volumes:
-      - name: db-data
-        emptyDir: {}
+        - name: db-data
+          emptyDir: {}
+
+
+

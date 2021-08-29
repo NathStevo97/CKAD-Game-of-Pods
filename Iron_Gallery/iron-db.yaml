@@ -1,41 +1,38 @@
-apiVersion: apps/v1
+---
 kind: Deployment
+apiVersion: apps/v1
 metadata:
-  creationTimestamp: null
-  labels:
-    db: mariadb
   name: iron-db
+  labels:
+    run: iron-db
 spec:
   replicas: 1
   selector:
     matchLabels:
       db: mariadb
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         db: mariadb
     spec:
       containers:
-      - image: kodekloud/irondb:2.0
-        name: iron-db
-        resources: {}
-        volumeMounts:
-        - name: db
-          mountPath: /var/lib/mysql
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: Braavo
-        - name: MYSQL_DATABASE
-          value: lychee
-        - name: MYSQL_USER
-          value: lychee
-        - name: MYSQL_PASSWORD
-          value: lychee
-        ports:
-        - containerPort: 3306
+        - image: kodekloud/irondb:2.0
+          name: iron-db
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MYSQL_DATABASE
+              value: 'lychee'
+            - name: MYSQL_USER
+              value: 'lychee'
+            - name: MYSQL_PASSWORD
+              value: 'lychee'
+            - name: MYSQL_ROOT_PASSWORD
+              value: 'Braavo'
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: db
       volumes:
-        - name: db
-          emptyDir: {}
-status: {}
+      - name: db
+        emptyDir: {}
+
+        
