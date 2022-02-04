@@ -3,6 +3,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: iron-gallery
+  namespace: iron-gallery
   labels:
     name: iron-gallery
 spec:
