@@ -1,6 +1,6 @@
 # CKAD_Game_of_Pods
-Kubernetes exercises from Kodekloud's Game of Pods course for local use.
-Some exercises are still being tweaked for use via Minikube; as things stand:
+Kubernetes exercises from Kodekloud's Game of Pods course for local use, some edits have been made from the Kodekloud Solution [repo](https://github.com/kodekloudhub/game-of-pods) as there were some issues in practice.
+As things stand:
 - Drupal_Bravo - Works 100%, had to edit the Kodekloud MySql deployment for MYSQL_USER as "root" is created by default already.
 - GOP_Fileserver_Pento - Works 100%, the Kodekloud version has incorrect selectors used in the service and pod.
 - Redis_Cluster - Works 100%, just make sure to either:
