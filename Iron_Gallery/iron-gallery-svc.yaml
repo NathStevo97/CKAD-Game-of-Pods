@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
      name: iron-gallery-service
+     namespace: iron-gallery
 spec:
   type: NodePort
   ports:

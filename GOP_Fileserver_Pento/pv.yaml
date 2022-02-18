@@ -3,6 +3,8 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
     name: data-pv
+    labels:
+      app: gop-fileserver
 spec:
    accessModes: ["ReadWriteMany"]
    capacity:

@@ -1,15 +1,21 @@
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: iron-gallery-ingress
+  namespace: iron-gallery
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /   #new 
 spec:
+  ingressClassName: nginx
   rules:
   - host: iron-gallery-braavos.com
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: iron-gallery-service
-          servicePort: 80
-          
+          service:
+            name: iron-gallery-service
+            port: 
+              number: 80

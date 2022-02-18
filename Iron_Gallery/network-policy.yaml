@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: iron-gallery-firewall
-  namespace: default
+  namespace: iron-gallery
 spec:
   podSelector:
     matchLabels:
