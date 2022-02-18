@@ -1,11 +1,13 @@
 # GOP Fileserver Deployment - Pento
 In this challenge you will work with the following:
 
-- Troubleshooting a Kubernetes API Server - https://kodekloud.com/courses/539883/lectures/9808356
-- Troubleshooting KubeConfig files - https://kodekloud.com/courses/539883/lectures/9808356
-- Drain/Cordon/UnCordon worker nodes - https://kodekloud.com/courses/539883/lectures/9808231
-- Create Persistent Volumes and Persistent Volume Claims - https://kodekloud.com/courses/539883/lectures/9808276
-- Deploy a simple file server application - https://kodekloud.com/courses/539883/lectures/9808165
+![Fileserver Map](./fileserver.png)
+
+- [Troubleshooting a Kubernetes API Server](https://kodekloud.com/courses/539883/lectures/9808356)
+- [Troubleshooting KubeConfig files](https://kodekloud.com/courses/539883/lectures/9808356)
+- [Drain/Cordon/UnCordon worker nodes](https://kodekloud.com/courses/539883/lectures/9808231)
+- [Create Persistent Volumes and Persistent Volume Claims](https://kodekloud.com/courses/539883/lectures/9808276)
+- [Deploy a simple file server application](https://kodekloud.com/courses/539883/lectures/9808165)
 
 ---
 

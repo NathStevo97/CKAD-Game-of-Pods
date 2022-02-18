@@ -1,11 +1,13 @@
 In this challenge you will work with the following:
 
-Deploy a Redis HA Cluster - https://kodekloud.com/courses/539883/lectures/9808165
-Deploy a StatefulSet
-Deploy a Redis Service - https://kodekloud.com/courses/539883/lectures/9808156
-Create Persistent Volumes for the StatefulSet - https://kodekloud.com/courses/539883/lectures/9808276
-Add Commands to the Pod definition - https://kodekloud.com/courses/539883/lectures/9808202
-Exec in to Redis Master pod to configure the cluster
+![Redis Cluster Map](./redis-cluster.png)
+
+- [Deploy a Redis HA Cluster](https://kodekloud.com/courses/539883/lectures/9808165)
+- Deploy a StatefulSet
+- [Deploy a Redis Service](https://kodekloud.com/courses/539883/lectures/9808156)
+- [Create Persistent Volumes for the StatefulSet](https://kodekloud.com/courses/539883/lectures/9808276)
+- [Add Commands to the Pod definition](https://kodekloud.com/courses/539883/lectures/9808202)
+- Exec in to Redis Master pod to configure the cluster
 
 ---
 

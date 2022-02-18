@@ -1,9 +1,10 @@
-In this challenge you will work with the following:
 
-- Deploy a Jekyll application - https://kodekloud.com/courses/539883/lectures/9808165
-- Security: Configure Roles and RoleBindings - https://kodekloud.com/courses/539883/lectures/9808249
-- Security: Configure KubeConfig - https://kodekloud.com/courses/539883/lectures/9808258
-- Create Persistent Volumes and Persistent Volume Claims - https://kodekloud.com/courses/539883/lectures/9808276
+![Jekyll Tyro Map](./Tyro.png)
+
+- [Deploy a Jekyll application](https://kodekloud.com/courses/539883/lectures/9808165)
+- [Security: Configure Roles and RoleBindings](https://kodekloud.com/courses/539883/lectures/9808249)
+- [Security: Configure KubeConfig](https://kodekloud.com/courses/539883/lectures/9808258)
+- [Create Persistent Volumes and Persistent Volume Claims](https://kodekloud.com/courses/539883/lectures/9808276)
 
 ---
 ## admin

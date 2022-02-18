@@ -1,5 +1,6 @@
 # Drupal - Bravo
 
+![drupal-map](./drupal.png)
 You will receive a quest to deploy a web server architecture stack for a particular software distribution, for example: Drupal with MySQL.
 
 Set up an example volume with storage allocation for the partition with the code:
@@ -9,7 +10,7 @@ Storage: 5Gi
 Access modes: ReadWriteOnce
 In order to do this, Create the persistent storage volume for Drupal on the web server cluster using YAML:
 
-master $ cat > drupal-mysql-pv.yaml
+```master $ cat > drupal-mysql-pv.yaml
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -22,17 +23,16 @@ spec:
  hostPath:
  path: /drupal-mysql-data
 master $
-Then test your work by clicking on the “Check” button in the game-board.
+```
 
-Click here to learn how to play.
 
 In this challenge you will work with the following:
 
-- Deploy a Drupal application - https://kodekloud.com/courses/539883/lectures/9808165
-- Configure Secrets - https://kodekloud.com/courses/539883/lectures/9808207
-- Exposing application through Services - https://kodekloud.com/courses/539883/lectures/9808156
-- Configure InitContainers on a POD - https://kodekloud.com/courses/539883/lectures/10589187
-- Create Persistent Volumes and Persistent Volume Claims - https://kodekloud.com/courses/539883/lectures/9808276
+- [Deploy a Drupal application](https://kodekloud.com/courses/539883/lectures/9808165)
+- [Configure Secrets](https://kodekloud.com/courses/539883/lectures/9808207)
+- [Exposing application through Services](https://kodekloud.com/courses/539883/lectures/9808156)
+- [Configure InitContainers on a POD](https://kodekloud.com/courses/539883/lectures/10589187)
+- [Create Persistent Volumes and Persistent Volume Claims](https://kodekloud.com/courses/539883/lectures/9808276)
 
 ## Drupal-PV-Hostpath
 - Configure drupal-pv with hostPath = /drupal-data (create the directory on Worker Nodes)
