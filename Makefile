@@ -9,3 +9,9 @@ gop-up:
 
 gop-down:
 	@make -C GOP_Fileserver_Pento down
+
+voting-up:
+	@make -C Voting_App up
+
+voting-down:
+	@make -C Voting_App down

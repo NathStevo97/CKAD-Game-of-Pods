@@ -1,14 +1,8 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  creationTimestamp: "2022-10-16T18:35:09Z"
   labels:
     kubernetes.io/metadata.name: vote
   name: vote
-  resourceVersion: "12838"
-  uid: 775c4f71-7687-4a39-a0e3-c5351d604d4b
-spec:
-  finalizers:
-  - kubernetes
 status:
   phase: Active
