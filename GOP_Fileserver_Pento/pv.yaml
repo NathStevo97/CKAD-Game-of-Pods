@@ -6,10 +6,10 @@ metadata:
     labels:
       app: gop-fileserver
 spec:
-   accessModes: ["ReadWriteMany"]
+   accessModes:
+   - ReadWriteMany
    capacity:
     storage: 1Gi
    hostPath:
-      path: /web
+      path: "/web"
       type: DirectoryOrCreate
-  
