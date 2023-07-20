@@ -15,3 +15,9 @@ voting-up:
 
 voting-down:
 	@make -C Voting_App down
+
+gallery-up:
+	@make -C Iron_Gallery up
+
+gallery-down:
+	@make -C Iron_Gallery down
