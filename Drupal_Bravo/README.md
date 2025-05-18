@@ -35,37 +35,45 @@ In this challenge you will work with the following:
 - [Create Persistent Volumes and Persistent Volume Claims](https://kodekloud.com/courses/539883/lectures/9808276)
 
 ## Drupal-PV-Hostpath
+
 - Configure drupal-pv with hostPath = /drupal-data (create the directory on Worker Nodes)
 
 ## Drupal-MySQL-PV-Hostpath
+
 - Configure drupal-mysql-pv with hostPath = /drupal-mysql-data (create the directory on Worker Nodes)
 
 ## Drupal-PV
+
 - Access modes: ReadWriteOnce
 - Volume Name: drupal-pv
 - Storage: 5Gi
 
 ## Drupal-MySQL-PV
+
 - Volume Name: drupal-mysql-pv
 - Storage: 5Gi
 - Access modes: ReadWriteOnce
 
 ## Drupal-PVC
+
 - Claim Name: drupal-pvc
 - Storage Request: 5Gi
 - Access modes: ReadWriteOnce
 
 ## Drupal-MySQL-PVC
+
 - Claim Name: drupal-mysql-pvc
 - Storage Request: 5Gi
 - Access modes: ReadWriteOnce
 
 ## Drupal-MySQL-Secret
+
 - Secret Name: drupal-mysql-secret
 - Secret: MYSQL_ROOT_PASSWORD=root_password
 - Secret: MYSQL_DATABASE=drupal-database
 
 ## Drupal-MySQL
+
 - Name: drupal-mysql
 - Replicas: 1
 - Image: mysql:5.7
@@ -74,6 +82,7 @@ In this challenge you will work with the following:
 - Deployment: 'drupal-mysql' running
 
 ## Drupal
+
 - Deployment Name: drupal
 - Replicas: 1
 - Image: drupal:8.6
@@ -92,11 +101,13 @@ In this challenge you will work with the following:
 - Deployment: 'drupal' has label 'app=drupal'
 
 ## Drupal-MySQL-Service
+
 - Name: drupal-mysql-service
 - Type: ClusterIP
 - Port: 3306
 
 ## Drupal-Service
+
 - frontend service name: drupal-service
 - drupal-service configured as NodePort
 - drupal-service uses NodePort 30095

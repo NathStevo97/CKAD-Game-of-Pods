@@ -12,15 +12,18 @@ In this challenge you will work with the following:
 ---
 
 ## redis-cluster-configmap
+
 - ConfigMap: redis-cluster-configmap is already created. Inspect it...
 
 ## redis01-06
+
 - PersistentVolume - Name: redis01-06
 - Access modes: ReadWriteOnce
 - Size: 1Gi
 - hostPath: /redis01-06, directory should be created on worker node
 
 ## redis-cluster
+
 - StatefulSet - Name: redis-cluster
 - Replicas: 6
 - Pods status: Running (All 6 replicas)
@@ -38,11 +41,13 @@ In this challenge you will work with the following:
 - volumeClaimTemplates - Storage Request: '1Gi'
 
 ## redis-cluster-service
+
 - Ports - service name 'redis-cluster-service', port name: 'client', port: '6379'
 - Ports - service name 'redis-cluster-service', port name: 'gossip', port: '16379'
 - Ports - service name 'redis-cluster-service', port name: 'client', targetPort: '6379'
 - Ports - service name 'redis-cluster-service', port name: 'gossip', targetPort: '16379'
 
 ## redis-cluster-config
+
 - Configure the Cluster. Once the StatefulSet has been deployed with 6 'Running' pods, run the below commands and type 'yes' when prompted.
 - Command: kubectl exec -it redis-cluster-0 -- redis-cli --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:{.spec.containers[*].ports[0].containerPort} ')
